@@ -1,5 +1,4 @@
-
-import { Linkedin, Mail, WhatsApp } from "lucide-react";
+import { Linkedin, Mail, MessageSquare } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,7 +20,7 @@ const Footer = () => {
                 <Mail className="h-5 w-5 hover:text-primary transition-colors" />
               </a>
               <a href="https://wa.me/5531999999999" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                <WhatsApp className="h-5 w-5 hover:text-primary transition-colors" />
+                <MessageSquare className="h-5 w-5 hover:text-primary transition-colors" />
               </a>
             </div>
           </div>

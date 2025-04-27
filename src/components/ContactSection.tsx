@@ -1,11 +1,10 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Mail, Phone, Linkedin, WhatsApp } from "lucide-react";
+import { Mail, Phone, Linkedin, MessageSquare } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
 const ContactSection = () => {
@@ -137,7 +136,7 @@ const ContactSection = () => {
                 className="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all"
               >
                 <div className="h-12 w-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
-                  <WhatsApp className="h-6 w-6 text-primary" />
+                  <MessageSquare className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <p className="font-semibold">WhatsApp</p>
