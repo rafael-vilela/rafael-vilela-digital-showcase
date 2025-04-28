@@ -45,7 +45,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="section bg-white">
       <div className="container-custom">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Entre em Contato</h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
             Pronto para elevar sua presença online? Entre em contato para discutirmos seu projeto.
@@ -53,7 +53,7 @@ const ContactSection = () => {
         </div>
         
         <div className="grid md:grid-cols-2 gap-12">
-          <Card className="shadow-lg border-none animate-fade-in">
+          <Card className="shadow-lg border-none animate-fade-up">
             <CardContent className="p-6">
               <h3 className="text-2xl font-bold mb-6">Envie uma mensagem</h3>
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -109,7 +109,7 @@ const ContactSection = () => {
             </CardContent>
           </Card>
           
-          <div className="animate-fade-in animate-delay-200">
+          <div className="animate-fade-up animate-delay-200">
             <h3 className="text-2xl font-bold mb-6">Informações de Contato</h3>
             <p className="text-gray-700 mb-8">
               Prefere entrar em contato diretamente? Utilize um dos canais abaixo:
@@ -117,45 +117,45 @@ const ContactSection = () => {
             
             <div className="space-y-6">
               <a 
-                href="mailto:contato@rafaelvilela.com" 
-                className="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all"
+                href="mailto:rafavpereira1@gmail.com" 
+                className="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all hover-transform"
               >
                 <div className="h-12 w-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <p className="font-semibold">E-mail</p>
-                  <p className="text-gray-700">contato@rafaelvilela.com</p>
+                  <p className="text-gray-700">rafavpereira1@gmail.com</p>
                 </div>
               </a>
               
               <a 
-                href="https://wa.me/5531999999999" 
+                href="https://wa.me/12982127115" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all"
+                className="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all hover-transform"
               >
                 <div className="h-12 w-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
                   <MessageSquare className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <p className="font-semibold">WhatsApp</p>
-                  <p className="text-gray-700">+55 (31) 99999-9999</p>
+                  <p className="text-gray-700">+55 (12) 98212-7115</p>
                 </div>
               </a>
               
               <a 
-                href="https://www.linkedin.com/in/rafaelvilela/" 
+                href="https://www.linkedin.com/in/rafael-pereira-37557322b" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all"
+                className="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all hover-transform"
               >
                 <div className="h-12 w-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
                   <Linkedin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <p className="font-semibold">LinkedIn</p>
-                  <p className="text-gray-700">/in/rafaelvilela</p>
+                  <p className="text-gray-700">/in/rafael-pereira-37557322b</p>
                 </div>
               </a>
             </div>
