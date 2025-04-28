@@ -28,16 +28,17 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         manualChunks: undefined,
-        chunkFileNames: 'assets/js/[name]-[hash].js',
-        entryFileNames: 'assets/js/[name]-[hash].js',
+        // Use .js extension explicitly to help with MIME types
+        chunkFileNames: 'assets/js/[name].[hash].js',
+        entryFileNames: 'assets/js/[name].[hash].js',
         assetFileNames: ({name}) => {
           if (/\.(gif|jpe?g|png|svg|webp)$/.test(name ?? '')) {
-            return 'assets/images/[name]-[hash][extname]';
+            return 'assets/images/[name].[hash][extname]';
           }
           if (/\.(woff|woff2|eot|ttf|otf)$/.test(name ?? '')) {
-            return 'assets/fonts/[name]-[hash][extname]';
+            return 'assets/fonts/[name].[hash][extname]';
           }
-          return 'assets/[name]-[hash][extname]';
+          return 'assets/[name].[hash][extname]';
         }
       }
     }
