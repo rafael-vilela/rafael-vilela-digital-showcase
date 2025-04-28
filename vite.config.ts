@@ -28,7 +28,8 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         manualChunks: undefined,
-        // Use .js extension explicitly to help with MIME types
+        format: 'es',
+        // Garantimos que a extensão .js seja explícita
         chunkFileNames: 'assets/js/[name].[hash].js',
         entryFileNames: 'assets/js/[name].[hash].js',
         assetFileNames: ({name}) => {
