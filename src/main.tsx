@@ -1,6 +1,6 @@
 
 import { createRoot } from 'react-dom/client'
-import App from './App.js'  // Garantindo que a extensão .js seja incluída
+import App from './App'
 import './index.css'
 
 // Monta o aplicativo no elemento root

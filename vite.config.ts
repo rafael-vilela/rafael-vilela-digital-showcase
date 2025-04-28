@@ -17,6 +17,7 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
   base: './',
   build: {
@@ -29,9 +30,8 @@ export default defineConfig(({ mode }) => ({
       output: {
         manualChunks: undefined,
         format: 'es',
-        // Garantimos que a extensão .js seja explícita
-        chunkFileNames: 'assets/js/[name].[hash].js',
-        entryFileNames: 'assets/js/[name].[hash].js',
+        entryFileNames: 'assets/[name].[hash].js',
+        chunkFileNames: 'assets/[name].[hash].js',
         assetFileNames: ({name}) => {
           if (/\.(gif|jpe?g|png|svg|webp)$/.test(name ?? '')) {
             return 'assets/images/[name].[hash][extname]';
