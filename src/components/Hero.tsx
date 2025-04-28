@@ -1,9 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center pt-16 bg-gradient-to-b from-blue-50 to-white">
+    <section id="home" className="min-h-screen flex items-center pt-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container-custom">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
@@ -13,12 +12,12 @@ const Hero = () => {
             <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-lg">
               Sou desenvolvedor web especializado em sites institucionais, lojas e-commerce e dashboards personalizados para elevar seu negócio online.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <a href="#contact">
-                <Button className="btn-primary">Entre em Contato</Button>
+            <div className="flex gap-4 mt-8">
+              <a href="#ecommerce" className="btn-primary hover-transform">
+                Ver Serviços
               </a>
-              <a href="#services">
-                <Button variant="outline" className="btn-outline">Ver Serviços</Button>
+              <a href="#contact" className="btn-outline hover-transform">
+                Entre em Contato
               </a>
             </div>
           </div>

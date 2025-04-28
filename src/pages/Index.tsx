@@ -29,8 +29,8 @@ const Index = () => {
             "Otimização para SEO e velocidade de carregamento",
             "Integração com redes sociais e marketing"
           ]}
-          ctaText="Ver mais projetos de e-commerce"
-          ctaLink="#contact"
+          ctaText="Visualizar Site"
+          ctaLink="https://www.diogoreiscasual.shop"
         />
         
         <ServiceSection 
@@ -38,7 +38,7 @@ const Index = () => {
           title="Sites Institucionais"
           description="Criação de sites profissionais que transmitem a identidade da sua empresa ou serviço, com foco em design moderno, navegação intuitiva e conversões."
           projectName="Site da Psicóloga"
-          projectUrl=""
+          projectUrl="https://beautiful-beignet-41f050.netlify.app"
           imageSrc="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
           imageAlt="Site Institucional de Psicóloga"
           features={[
@@ -48,8 +48,8 @@ const Index = () => {
             "Blog integrado para marketing de conteúdo",
             "Compatível com todos os dispositivos"
           ]}
-          ctaText="Ver mais sites institucionais"
-          ctaLink="#contact"
+          ctaText="Visualizar Site"
+          ctaLink="https://beautiful-beignet-41f050.netlify.app"
           reverse={true}
         />
         
@@ -58,7 +58,7 @@ const Index = () => {
           title="Dashboards Personalizados"
           description="Desenvolvimento de painéis de controle interativos que transformam dados complexos em visualizações claras para tomada de decisões estratégicas."
           projectName="Dashboard de Dados"
-          projectUrl=""
+          projectUrl="https://animated-nasturtium-8e6cb5.netlify.app"
           imageSrc="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
           imageAlt="Dashboard Personalizado"
           features={[
@@ -68,12 +68,11 @@ const Index = () => {
             "Exportação de relatórios automatizada",
             "Interface intuitiva para uso diário"
           ]}
-          ctaText="Ver mais exemplos de dashboards"
-          ctaLink="#contact"
+          ctaText="Visualizar Dashboard"
+          ctaLink="https://animated-nasturtium-8e6cb5.netlify.app"
         />
         
         <Testimonials />
-        
         <ContactSection />
       </main>
       

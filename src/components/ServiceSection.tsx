@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -24,8 +25,6 @@ const ServiceSection = ({
   imageSrc,
   imageAlt,
   features,
-  ctaText,
-  ctaLink,
   reverse = false,
 }: ServiceSectionProps) => {
   return (
@@ -36,7 +35,7 @@ const ServiceSection = ({
           reverse ? "md:flex-row-reverse" : ""
         )}>
           <div className="service-info animate-fade-up">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">{title}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">{title}</h2>
             <p className="text-lg text-gray-700 mb-6">{description}</p>
             
             {projectName && (
@@ -44,13 +43,19 @@ const ServiceSection = ({
                 <h3 className="text-xl font-semibold mb-2">Projeto em Destaque:</h3>
                 <p className="font-medium text-primary mb-3">{projectName}</p>
                 {projectUrl && (
-                  <Button 
-                    variant="outline"
-                    className="hover-transform"
-                    onClick={() => window.open(projectUrl, '_blank')}
+                  <a 
+                    href={projectUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block"
                   >
-                    Visualizar Projeto
-                  </Button>
+                    <Button 
+                      variant="outline"
+                      className="hover-transform"
+                    >
+                      Visualizar Projeto
+                    </Button>
+                  </a>
                 )}
               </div>
             )}
@@ -70,10 +75,6 @@ const ServiceSection = ({
                 ))}
               </ul>
             </div>
-            
-            <a href={ctaLink}>
-              <Button className="btn-primary hover-transform">{ctaText}</Button>
-            </a>
           </div>
           
           <div className={cn(
