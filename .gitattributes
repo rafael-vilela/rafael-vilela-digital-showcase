@@ -1,0 +1,16 @@
+
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# JS and TS files should always be served as text/javascript
+*.js    text eol=lf linguist-language=JavaScript
+*.jsx   text eol=lf linguist-language=JavaScript
+*.ts    text eol=lf linguist-language=TypeScript
+*.tsx   text eol=lf linguist-language=TypeScript
+
+# Set MIME types for assets
+*.jpg   binary
+*.png   binary
+*.gif   binary
+*.ico   binary
+*.svg   text
