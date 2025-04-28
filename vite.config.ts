@@ -20,4 +20,16 @@ export default defineConfig(({ mode }) => ({
   },
   // Adds a relative base URL to work with GitHub Pages
   base: './',
+  build: {
+    // Ensure all assets use relative paths for GitHub Pages
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        // Add proper extensions to chunk filenames to ensure correct MIME types
+        chunkFileNames: 'assets/js/[name]-[hash].js',
+        entryFileNames: 'assets/js/[name]-[hash].js',
+        assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
+      }
+    }
+  }
 }));
