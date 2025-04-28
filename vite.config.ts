@@ -18,17 +18,27 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // Adds a relative base URL to work with GitHub Pages
   base: './',
   build: {
-    // Ensure all assets use relative paths for GitHub Pages
+    outDir: 'dist',
+    emptyOutDir: true,
+    sourcemap: false,
+    minify: true,
     assetsDir: 'assets',
     rollupOptions: {
       output: {
-        // Add proper extensions to chunk filenames to ensure correct MIME types
+        manualChunks: undefined,
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/[name]-[hash].js',
-        assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
+        assetFileNames: ({name}) => {
+          if (/\.(gif|jpe?g|png|svg|webp)$/.test(name ?? '')) {
+            return 'assets/images/[name]-[hash][extname]';
+          }
+          if (/\.(woff|woff2|eot|ttf|otf)$/.test(name ?? '')) {
+            return 'assets/fonts/[name]-[hash][extname]';
+          }
+          return 'assets/[name]-[hash][extname]';
+        }
       }
     }
   }
