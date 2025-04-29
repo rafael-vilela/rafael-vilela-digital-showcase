@@ -25,25 +25,14 @@ export default defineConfig(({ mode }) => ({
     emptyOutDir: true,
     sourcemap: false,
     minify: true,
-    assetsDir: '',
+    assetsDir: 'assets',
     rollupOptions: {
       output: {
         manualChunks: undefined,
         format: 'es',
-        entryFileNames: 'assets/js/[name].[hash].js',
-        chunkFileNames: 'assets/js/[name].[hash].js',
-        assetFileNames: ({name}) => {
-          if (/\.(gif|jpe?g|png|svg|webp)$/.test(name ?? '')) {
-            return 'assets/images/[name].[hash][extname]';
-          }
-          if (/\.(woff|woff2|eot|ttf|otf)$/.test(name ?? '')) {
-            return 'assets/fonts/[name].[hash][extname]';
-          }
-          if (/\.(js|jsx|ts|tsx)$/.test(name ?? '')) {
-            return 'assets/js/[name].[hash][extname]';
-          }
-          return 'assets/[name].[hash][extname]';
-        }
+        entryFileNames: 'assets/[name].[hash].js',
+        chunkFileNames: 'assets/[name].[hash].js',
+        assetFileNames: 'assets/[name].[hash][extname]'
       }
     }
   }
