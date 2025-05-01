@@ -35,7 +35,7 @@ const ServiceSection = ({
                 <h3 className="text-xl font-semibold mb-2">Projeto em Destaque:</h3>
                 <p className="font-medium text-primary mb-3">{projectName}</p>
                 {projectUrl && <a href={projectUrl} target="_blank" rel="noopener noreferrer" className="inline-block">
-                    <Button variant="outline" className="hover-transform text-base bg-zinc-400 hover:bg-zinc-300">Visualizar Projeto</Button>
+                    <Button variant="outline" className="hover-transform text-base bg-gray-300 hover:bg-gray-200">Visualizar Projeto</Button>
                   </a>}
               </div>}
             
