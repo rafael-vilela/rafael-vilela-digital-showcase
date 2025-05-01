@@ -1,23 +1,54 @@
 
 import { Button } from "@/components/ui/button";
+import TypeAnimation from "./TypeAnimation";
 
 const Hero = () => {
+  const typingPhrases = [
+    "experiências digitais",
+    "resultados concretos",
+    "projetos memoráveis",
+    "soluções personalizadas",
+    "crescimento real",
+  ];
+
   return (
     <section id="home" className="min-h-screen flex items-center pt-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container-custom">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-gray-900">
-              Transformando ideias em <span className="text-primary">experiências digitais</span>
+              Transformando ideias em{" "}
+              <span className="text-primary">
+                <TypeAnimation 
+                  phrases={typingPhrases}
+                  typingSpeed={80}
+                  deletingSpeed={40}
+                  delayBetweenPhrases={1500}
+                />
+              </span>
             </h1>
             <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-lg">
               Sou desenvolvedor web especializado em sites institucionais, lojas e-commerce e dashboards personalizados para elevar seu negócio online.
             </p>
             <div className="flex gap-4 mt-8">
-              <a href="#ecommerce" className="btn-primary hover-transform">
+              <a 
+                href="#ecommerce" 
+                className="btn-primary hover-transform"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('ecommerce')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Ver Serviços
               </a>
-              <a href="#contact" className="btn-outline hover-transform">
+              <a 
+                href="#contact" 
+                className="btn-outline hover-transform"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Entre em Contato
               </a>
             </div>

@@ -27,10 +27,29 @@ const Header = () => {
     { label: "Contato", href: "#contact" },
   ];
 
+  const handleScrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId.replace('#', ''));
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      if (mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    }
+  };
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/95 shadow-md py-3" : "bg-transparent py-5"}`}>
       <div className="container-custom flex justify-between items-center">
-        <a href="#home" className="font-montserrat text-2xl font-bold text-primary">Rafael Vilela</a>
+        <a 
+          href="#home" 
+          className="font-montserrat text-2xl font-bold text-primary"
+          onClick={(e) => {
+            e.preventDefault();
+            handleScrollToSection('#home');
+          }}
+        >
+          Rafael Vilela
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
@@ -39,6 +58,10 @@ const Header = () => {
               key={index} 
               href={item.href} 
               className="font-medium hover:text-primary transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                handleScrollToSection(item.href);
+              }}
             >
               {item.label}
             </a>
@@ -63,7 +86,10 @@ const Header = () => {
                   key={index} 
                   href={item.href} 
                   className="text-xl font-medium hover:text-primary transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleScrollToSection(item.href);
+                  }}
                 >
                   {item.label}
                 </a>

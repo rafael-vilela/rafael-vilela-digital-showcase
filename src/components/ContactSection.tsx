@@ -1,45 +1,35 @@
+
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Mail, Phone, Linkedin, MessageSquare } from "lucide-react";
-import { useToast } from "@/components/ui/use-toast";
+import { Button } from "@/components/ui/button";
+import { Mail, MessageSquare, Linkedin } from "lucide-react";
 
 const ContactSection = () => {
-  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+    segment: "",
     service: "",
-    message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSelectChange = (value: string) => {
-    setFormData(prev => ({ ...prev, service: value }));
+  const handleSelectChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
+  const handleWhatsAppRedirect = () => {
+    const { name, segment, service } = formData;
+    const message = `Olá, meu nome é ${name || '[Nome]'}. Tenho um negócio no segmento de ${segment || '[Segmento]'} e gostaria de um orçamento para ${service || '[Tipo de Serviço]'}.`;
     
-    toast({
-      title: "Mensagem enviada!",
-      description: "Entraremos em contato em breve.",
-    });
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/5512982127115?text=${encodedMessage}`;
     
-    setFormData({
-      name: "",
-      email: "",
-      service: "",
-      message: "",
-    });
+    window.open(whatsappURL, '_blank');
   };
 
   return (
@@ -55,8 +45,8 @@ const ContactSection = () => {
         <div className="grid md:grid-cols-2 gap-12">
           <Card className="shadow-lg border-none animate-fade-up">
             <CardContent className="p-6">
-              <h3 className="text-2xl font-bold mb-6">Envie uma mensagem</h3>
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <h3 className="text-2xl font-bold mb-6">Solicitar Orçamento</h3>
+              <div className="space-y-5">
                 <div>
                   <Input
                     type="text"
@@ -64,48 +54,39 @@ const ContactSection = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    required
                     className="w-full"
                   />
                 </div>
                 <div>
                   <Input
-                    type="email"
-                    placeholder="Seu e-mail"
-                    name="email"
-                    value={formData.email}
+                    type="text"
+                    placeholder="Segmento do seu negócio"
+                    name="segment"
+                    value={formData.segment}
                     onChange={handleChange}
-                    required
                     className="w-full"
                   />
                 </div>
                 <div>
-                  <Select value={formData.service} onValueChange={handleSelectChange}>
+                  <Select value={formData.service} onValueChange={(value) => handleSelectChange('service', value)}>
                     <SelectTrigger className="w-full">
                       <SelectValue placeholder="Tipo de serviço" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="ecommerce">E-commerce</SelectItem>
-                      <SelectItem value="website">Site Institucional</SelectItem>
-                      <SelectItem value="dashboard">Dashboard</SelectItem>
-                      <SelectItem value="other">Outro serviço</SelectItem>
+                      <SelectItem value="E-commerce">Loja E-commerce</SelectItem>
+                      <SelectItem value="Site Institucional">Site Institucional</SelectItem>
+                      <SelectItem value="Dashboard">Dashboard Personalizado</SelectItem>
+                      <SelectItem value="Outro serviço">Outro serviço</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
-                <div>
-                  <Textarea
-                    placeholder="Sua mensagem"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    className="w-full h-32"
-                  />
-                </div>
-                <Button type="submit" className="btn-primary w-full">
-                  Enviar Mensagem
+                <Button 
+                  onClick={handleWhatsAppRedirect} 
+                  className="btn-primary w-full"
+                >
+                  Solicitar Orçamento via WhatsApp
                 </Button>
-              </form>
+              </div>
             </CardContent>
           </Card>
           
