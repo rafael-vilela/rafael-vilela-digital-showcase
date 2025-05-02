@@ -20,7 +20,7 @@ const Index = () => {
           description="Desenvolvimento de lojas virtuais completas, com design personalizado, pagamentos integrados e experiência de usuário excepcional para impulsionar suas vendas online."
           projectName="Diogo Reis Casual"
           projectUrl="https://www.diogoreiscasual.shop"
-          imageSrc="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          imageSrc="https://i.imgur.com/f2GpldQ.png"
           imageAlt="E-commerce Diogo Reis Casual"
           features={[
             "Design responsivo para desktop e dispositivos móveis",
@@ -39,7 +39,7 @@ const Index = () => {
           description="Criação de sites profissionais que transmitem a identidade da sua empresa ou serviço, com foco em design moderno, navegação intuitiva e conversões."
           projectName="Site da Psicóloga"
           projectUrl="https://beautiful-beignet-41f050.netlify.app"
-          imageSrc="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          imageSrc="https://i.imgur.com/HqqpL6w.png"
           imageAlt="Site Institucional de Psicóloga"
           features={[
             "Design personalizado alinhado com sua marca",
@@ -59,7 +59,7 @@ const Index = () => {
           description="Desenvolvimento de painéis de controle interativos que transformam dados complexos em visualizações claras para tomada de decisões estratégicas."
           projectName="Dashboard de Dados"
           projectUrl="https://animated-nasturtium-8e6cb5.netlify.app"
-          imageSrc="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          imageSrc="https://i.imgur.com/F0K17b7.png"
           imageAlt="Dashboard Personalizado"
           features={[
             "Visualizações de dados interativas e em tempo real",
