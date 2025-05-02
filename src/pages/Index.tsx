@@ -17,7 +17,7 @@ const Index = () => {
         <ServiceSection 
           id="ecommerce"
           title="Lojas E-commerce"
-          description="Desenvolvimento de lojas virtuais completas, com design personalizado, pagamentos integrados e experiência de usuário excepcional para impulsionar suas vendas online."
+          description="Criação de lojas virtuais completas com design personalizado, integração de pagamentos seguros e uma experiência de usuário única para maximizar suas vendas online e engajamento."
           projectName="Diogo Reis Casual"
           projectUrl="https://www.diogoreiscasual.shop"
           imageSrc="https://i.imgur.com/f2GpldQ.png"
