@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -84,7 +85,7 @@ const ContactSection = () => {
             </p>
             
             <div className="space-y-6">
-              <a href="mailto:rafavpereira1@gmail.com" className="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all hover-transform">
+              <a href="mailto:rafaelvilelaservicos@gmail.com" className="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all hover-transform">
                 <div className="h-12 w-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
@@ -104,13 +105,13 @@ const ContactSection = () => {
                 </div>
               </a>
               
-              <a href="https://www.linkedin.com/in/rafael-pereira-37557322b" target="_blank" rel="noopener noreferrer" className="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all hover-transform">
+              <a href="https://www.linkedin.com/in/rafael-vilela-45b2a0363" target="_blank" rel="noopener noreferrer" className="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all hover-transform">
                 <div className="h-12 w-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
                   <Linkedin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <p className="font-semibold">LinkedIn</p>
-                  <p className="text-gray-700">/in/rafael-pereira-37557322b</p>
+                  <p className="text-gray-700">/in/rafael-vilela-45b2a0363</p>
                 </div>
               </a>
             </div>

@@ -22,10 +22,10 @@ const Footer = () => {
               Desenvolvedor especializado em sites institucionais, e-commerce e dashboards personalizados.
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.linkedin.com/in/rafael-pereira-37557322b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/rafael-vilela-45b2a0363" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5 hover:text-primary transition-colors hover-lift" />
               </a>
-              <a href="mailto:rafavpereira1@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
+              <a href="mailto:rafaelvilelaservicos@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
                 <Mail className="h-5 w-5 hover:text-primary transition-colors hover-lift" />
               </a>
               <a href="https://wa.me/5512982127115" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
@@ -79,7 +79,7 @@ const Footer = () => {
           <div className="animate-fade-up animate-delay-200">
             <h3 className="text-xl font-bold mb-3 md:mb-4">Contato</h3>
             <ul className="space-y-2">
-              <li className="text-gray-300 text-sm md:text-base">rafavpereira1@gmail.com</li>
+              <li className="text-gray-300 text-sm md:text-base">rafaelvilelaservicos@gmail.com</li>
               <li className="text-gray-300 text-sm md:text-base">+55 (12) 98212-7115</li>
               <li>
                 <a 
