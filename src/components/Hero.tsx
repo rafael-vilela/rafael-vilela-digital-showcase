@@ -22,7 +22,7 @@ const Hero = () => {
                 <TypeAnimation phrases={typingPhrases} typingSpeed={80} deletingSpeed={40} delayBetweenPhrases={1500} />
               </span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 md:mb-8 max-w-lg">Sou Rafael Vilela, desenvolvedor web especializado em transformar ideias em soluções digitais. Crio sites institucionais, lojas de e-commerce e dashboards personalizados, focando em resultados e experiências únicas que elevam seu negócio no mundo online.</p>
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 md:mb-8 max-w-lg">Sou Rafael Vilela, desenvolvedor web. Crio sites, e-commerces e dashboards que atraem, convertem e geram resultados reais para seu negócio.</p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 md:mt-8">
               <a href="#ecommerce" className="btn-primary hover-transform text-center py-2 md:py-3 text-sm sm:text-base" onClick={e => {
               e.preventDefault();
