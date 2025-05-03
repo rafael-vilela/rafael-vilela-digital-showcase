@@ -32,50 +32,49 @@ const ServiceSection = ({
   return (
     <section id={id} className="section bg-white">
       <div className="container-custom">
-        {/* Change the order on mobile with flex-col-reverse */}
         <div className={cn(
           "grid md:grid-cols-2 gap-12 items-center", 
           reverse ? "md:flex-row-reverse" : ""
         )}>
-          {/* Mobile image container - Only shows on mobile */}
-          <div className="block md:hidden w-full mb-6">
-            <div className="relative">
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/10 rounded-full"></div>
-              {projectUrl ? (
-                <a 
-                  href={projectUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="block relative rounded-xl overflow-hidden shadow-lg hover-transform"
-                >
-                  <img 
-                    src={imageSrc} 
-                    alt={imageAlt} 
-                    className="w-full h-auto object-cover" 
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                    <h3 className="text-white font-semibold text-xl">{projectName}</h3>
-                  </div>
-                </a>
-              ) : (
-                <div className="relative rounded-xl overflow-hidden shadow-lg hover-transform">
-                  <img 
-                    src={imageSrc} 
-                    alt={imageAlt} 
-                    className="w-full h-auto object-cover" 
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                    <h3 className="text-white font-semibold text-xl">{projectName}</h3>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-          
           {/* Content section */}
           <div className="service-info animate-fade-up">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">{title}</h2>
             <p className="text-lg text-gray-700 mb-6">{description}</p>
+            
+            {/* Mobile image container - Only shows on mobile */}
+            <div className="block md:hidden w-full mb-6">
+              <div className="relative">
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/10 rounded-full"></div>
+                {projectUrl ? (
+                  <a 
+                    href={projectUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="block relative rounded-xl overflow-hidden shadow-lg hover-transform"
+                  >
+                    <img 
+                      src={imageSrc} 
+                      alt={imageAlt} 
+                      className="w-full h-auto object-cover" 
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                      <h3 className="text-white font-semibold text-xl">{projectName}</h3>
+                    </div>
+                  </a>
+                ) : (
+                  <div className="relative rounded-xl overflow-hidden shadow-lg hover-transform">
+                    <img 
+                      src={imageSrc} 
+                      alt={imageAlt} 
+                      className="w-full h-auto object-cover" 
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                      <h3 className="text-white font-semibold text-xl">{projectName}</h3>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
             
             {projectName && (
               <div className="mb-6">
