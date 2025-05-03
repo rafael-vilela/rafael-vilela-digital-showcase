@@ -13,18 +13,18 @@ const testimonials: Testimonial[] = [
     id: 1,
     name: "Diogo Reis",
     company: "Diogo Reis Casual",
-    content: "Rafael desenvolveu nossa loja virtual com um design incrível e funcionalidade perfeita. As vendas aumentaram significativamente desde o lançamento!"
+    content: "Rafael desenvolveu nossa loja virtual com um design incrível e funcionalidade perfeita. Muito fácil de manutenção, recomendo!"
   },
   {
     id: 2,
-    name: "Dra. Mariana Silva",
+    name: "Psicóloga Célia",
     company: "Psicóloga",
     content: "Meu site institucional ficou exatamente como eu imaginava. O agendamento online facilitou muito a vida dos meus pacientes. Recomendo fortemente!"
   },
   {
     id: 3,
-    name: "Carlos Mendes",
-    company: "Análise de Dados LTDA",
+    name: "Caue",
+    company: "Analista de Dados",
     content: "O dashboard personalizado que o Rafael criou revolucionou a forma como visualizamos nossos dados de negócio. Interface intuitiva e dados sempre atualizados."
   }
 ];
