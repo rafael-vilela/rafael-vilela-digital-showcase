@@ -24,11 +24,11 @@ const Index = () => {
           imageSrc="https://i.imgur.com/f2GpldQ.png"
           imageAlt="E-commerce Diogo Reis Casual"
           features={[
-            "Design responsivo para desktop e dispositivos móveis",
-            "Gateway de pagamento integrado e seguro",
-            "Gestão de estoque e pedidos simplificada",
-            "Otimização para SEO e velocidade de carregamento",
-            "Integração com redes sociais e marketing"
+            "Design responsivo adaptado para computadores e celulares",
+            "Integração com gateways de pagamento seguros (Pix, cartão, boleto)",
+            "Controle fácil de estoque, pedidos e clientes",
+            "Otimizado para SEO e carregamento rápido",
+            "Integração com redes sociais e ferramentas de marketing digital"
           ]}
           ctaText="Visualizar Site"
           ctaLink="https://www.diogoreiscasual.shop"
@@ -43,11 +43,11 @@ const Index = () => {
           imageSrc="https://i.imgur.com/HqqpL6w.png"
           imageAlt="Site Institucional de Psicóloga"
           features={[
-            "Design personalizado alinhado com sua marca",
-            "Sistema de agendamento online",
-            "Páginas otimizadas para conversão",
-            "Blog integrado para marketing de conteúdo",
-            "Compatível com todos os dispositivos"
+            "Design personalizado e alinhado à identidade visual da sua marca",
+            "Sistema de agendamento online integrado (se necessário)",
+            "Páginas otimizadas para conversão de novos clientes",
+            "Site integrado com suas redes sociais",
+            "Totalmente compatível com todos os dispositivos"
           ]}
           ctaText="Visualizar Site"
           ctaLink="https://beautiful-beignet-41f050.netlify.app"
